@@ -7,7 +7,7 @@ PYTHON_VER="3.12"
 conda create --name $ENV_NAME python=$PYTHON_VER --yes
 
 # Activate the Conda environment
-source activate $ENV_NAME
+conda activate $ENV_NAME
 
 if [ -f "requirements.txt" ]; then
     # Install packages from requirements.txt

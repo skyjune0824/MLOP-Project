@@ -1,2 +1,5 @@
 
 kaggle
+pandas
+scikit-learn
+
