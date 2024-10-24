@@ -3,7 +3,8 @@
 DATASET_SLUG="hasibullahaman/traffic-prediction-dataset"
 
 mkdir -p data/raw
-mkdir -p data/csv
+mkdir -p data/csv/train
+mkdir -p data/csv/test
 mkdir -p data/pkl
 
 cd data/raw

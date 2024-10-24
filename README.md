@@ -14,5 +14,6 @@
 #### Traffic Dataset
 
 * <https://www.kaggle.com/datasets/hasibullahaman/traffic-prediction-dataset>
+* Afghanistan, Kabul, Abdul-haq Crossroad (Asia)
 
 ## Preprocessing
