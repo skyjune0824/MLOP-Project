@@ -36,7 +36,7 @@ def run_full():
     run above functions
     '''
 
-    X, y = separate(f"{CSV_DIR}/full_features.csv", target="Total")
+    X, y = separate(f"{CSV_DIR}/converted_features.csv", target="Total")
     X_train, X_test, y_train, y_test = split(X, y)
 
     save_csv(f"{TRAIN_DIR}/X.csv", X_train)

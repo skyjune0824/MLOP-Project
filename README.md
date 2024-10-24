@@ -17,3 +17,10 @@
 * Afghanistan, Kabul, Abdul-haq Crossroad (Asia)
 
 ## Preprocessing
+
+* Run 'python -m preprocess.run'
+  * It will automatically process, extract, and stack relavent features.
+
+## Project Proposal
+
+* <https://www.overleaf.com/read/qhddtgnffvsz#a4bac8>
