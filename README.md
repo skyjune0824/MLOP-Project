@@ -21,6 +21,12 @@
 * Run 'python -m preprocess.run'
   * It will automatically process, extract, and stack relavent features.
 
+## Models
+
+### LSTM
+
+* Run 'python -m model.LSTM'
+
 ## Project Proposal
 
 * <https://www.overleaf.com/read/qhddtgnffvsz#a4bac8>
