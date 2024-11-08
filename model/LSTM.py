@@ -60,7 +60,7 @@ def main(hide = False):
 
     model = build_lstm_model(input_shape=(n_input, X_train.shape[1]))
 
-    checkpoint = ModelCheckpoint('best_model.keras', save_best_only=True, monitor='loss', mode='min')
+    checkpoint = ModelCheckpoint('LSTM_best_model.keras', save_best_only=True, monitor='loss', mode='min')
 
     verbose = 2 if hide else 1
 
