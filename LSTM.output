@@ -1,0 +1,429 @@
+2024-11-01 22:22:32.852078: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2024-11-01 22:22:32.854037: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2024-11-01 22:22:32.859587: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1731036152.869325 2254684 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1731036152.872039 2254684 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-11-07 22:22:32.881544: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+W0000 00:00:1731036154.199865 2254684 gpu_device.cc:2344] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+/home/jun/miniconda3/envs/traffic/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:204: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+/home/jun/miniconda3/envs/traffic/lib/python3.10/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+Epoch 1/200
+2377/2377 - 3s - 1ms/step - loss: 4541.0400
+Epoch 2/200
+2377/2377 - 2s - 806us/step - loss: 3885.0674
+Epoch 3/200
+2377/2377 - 2s - 779us/step - loss: 3836.4001
+Epoch 4/200
+2377/2377 - 2s - 767us/step - loss: 3792.0251
+Epoch 5/200
+2377/2377 - 2s - 806us/step - loss: 3791.8545
+Epoch 6/200
+2377/2377 - 2s - 767us/step - loss: 3760.7527
+Epoch 7/200
+2377/2377 - 2s - 709us/step - loss: 3748.7505
+Epoch 8/200
+2377/2377 - 2s - 754us/step - loss: 3748.9656
+Epoch 9/200
+2377/2377 - 2s - 821us/step - loss: 3746.5630
+Epoch 10/200
+2377/2377 - 2s - 808us/step - loss: 3743.1814
+Epoch 11/200
+2377/2377 - 2s - 795us/step - loss: 3719.2205
+Epoch 12/200
+2377/2377 - 2s - 792us/step - loss: 3733.8958
+Epoch 13/200
+2377/2377 - 2s - 747us/step - loss: 3710.4111
+Epoch 14/200
+2377/2377 - 2s - 776us/step - loss: 3726.1477
+Epoch 15/200
+2377/2377 - 2s - 784us/step - loss: 3690.1711
+Epoch 16/200
+2377/2377 - 2s - 771us/step - loss: 3738.7195
+Epoch 17/200
+2377/2377 - 2s - 816us/step - loss: 3705.1152
+Epoch 18/200
+2377/2377 - 2s - 815us/step - loss: 3723.4072
+Epoch 19/200
+2377/2377 - 2s - 808us/step - loss: 3724.1392
+Epoch 20/200
+2377/2377 - 2s - 815us/step - loss: 3688.5684
+Epoch 21/200
+2377/2377 - 2s - 732us/step - loss: 3693.5339
+Epoch 22/200
+2377/2377 - 2s - 722us/step - loss: 3710.1162
+Epoch 23/200
+2377/2377 - 2s - 756us/step - loss: 3694.3782
+Epoch 24/200
+2377/2377 - 2s - 758us/step - loss: 3697.7859
+Epoch 25/200
+2377/2377 - 2s - 804us/step - loss: 3707.3201
+Epoch 26/200
+2377/2377 - 2s - 791us/step - loss: 3668.1338
+Epoch 27/200
+2377/2377 - 2s - 815us/step - loss: 3688.7800
+Epoch 28/200
+2377/2377 - 2s - 828us/step - loss: 3689.3613
+Epoch 29/200
+2377/2377 - 2s - 806us/step - loss: 3676.9773
+Epoch 30/200
+2377/2377 - 2s - 755us/step - loss: 3691.4299
+Epoch 31/200
+2377/2377 - 2s - 796us/step - loss: 3666.8650
+Epoch 32/200
+2377/2377 - 2s - 871us/step - loss: 3660.1257
+Epoch 33/200
+2377/2377 - 2s - 834us/step - loss: 3665.9338
+Epoch 34/200
+2377/2377 - 2s - 738us/step - loss: 3668.4888
+Epoch 35/200
+2377/2377 - 2s - 859us/step - loss: 3651.3235
+Epoch 36/200
+2377/2377 - 2s - 858us/step - loss: 3667.3291
+Epoch 37/200
+2377/2377 - 2s - 853us/step - loss: 3641.4683
+Epoch 38/200
+2377/2377 - 2s - 784us/step - loss: 3650.7585
+Epoch 39/200
+2377/2377 - 3s - 1ms/step - loss: 3631.8052
+Epoch 40/200
+2377/2377 - 3s - 1ms/step - loss: 3645.4392
+Epoch 41/200
+2377/2377 - 2s - 867us/step - loss: 3631.6404
+Epoch 42/200
+2377/2377 - 2s - 849us/step - loss: 3647.9128
+Epoch 43/200
+2377/2377 - 2s - 787us/step - loss: 3634.9458
+Epoch 44/200
+2377/2377 - 2s - 849us/step - loss: 3630.2170
+Epoch 45/200
+2377/2377 - 2s - 738us/step - loss: 3632.4309
+Epoch 46/200
+2377/2377 - 2s - 743us/step - loss: 3607.9045
+Epoch 47/200
+2377/2377 - 2s - 876us/step - loss: 3615.6033
+Epoch 48/200
+2377/2377 - 2s - 1ms/step - loss: 3626.8035
+Epoch 49/200
+2377/2377 - 2s - 846us/step - loss: 3610.1833
+Epoch 50/200
+2377/2377 - 2s - 758us/step - loss: 3606.1221
+Epoch 51/200
+2377/2377 - 2s - 756us/step - loss: 3603.8459
+Epoch 52/200
+2377/2377 - 2s - 774us/step - loss: 3608.1914
+Epoch 53/200
+2377/2377 - 2s - 823us/step - loss: 3577.9705
+Epoch 54/200
+2377/2377 - 2s - 823us/step - loss: 3598.4670
+Epoch 55/200
+2377/2377 - 2s - 784us/step - loss: 3594.6648
+Epoch 56/200
+2377/2377 - 2s - 788us/step - loss: 3567.9500
+Epoch 57/200
+2377/2377 - 2s - 797us/step - loss: 3548.4363
+Epoch 58/200
+2377/2377 - 2s - 793us/step - loss: 3553.4880
+Epoch 59/200
+2377/2377 - 2s - 805us/step - loss: 3564.9158
+Epoch 60/200
+2377/2377 - 2s - 781us/step - loss: 3559.6807
+Epoch 61/200
+2377/2377 - 2s - 741us/step - loss: 3569.3240
+Epoch 62/200
+2377/2377 - 2s - 776us/step - loss: 3550.9727
+Epoch 63/200
+2377/2377 - 2s - 754us/step - loss: 3528.1831
+Epoch 64/200
+2377/2377 - 2s - 833us/step - loss: 3549.3076
+Epoch 65/200
+2377/2377 - 2s - 857us/step - loss: 3517.7590
+Epoch 66/200
+2377/2377 - 2s - 836us/step - loss: 3520.2183
+Epoch 67/200
+2377/2377 - 2s - 858us/step - loss: 3516.7976
+Epoch 68/200
+2377/2377 - 2s - 791us/step - loss: 3499.1392
+Epoch 69/200
+2377/2377 - 2s - 826us/step - loss: 3503.0437
+Epoch 70/200
+2377/2377 - 2s - 864us/step - loss: 3482.7773
+Epoch 71/200
+2377/2377 - 2s - 848us/step - loss: 3500.3120
+Epoch 72/200
+2377/2377 - 2s - 873us/step - loss: 3473.8218
+Epoch 73/200
+2377/2377 - 2s - 763us/step - loss: 3453.6521
+Epoch 74/200
+2377/2377 - 2s - 748us/step - loss: 3469.8347
+Epoch 75/200
+2377/2377 - 2s - 754us/step - loss: 3452.5854
+Epoch 76/200
+2377/2377 - 2s - 772us/step - loss: 3442.2988
+Epoch 77/200
+2377/2377 - 2s - 800us/step - loss: 3447.0723
+Epoch 78/200
+2377/2377 - 2s - 796us/step - loss: 3398.6255
+Epoch 79/200
+2377/2377 - 2s - 807us/step - loss: 3430.0596
+Epoch 80/200
+2377/2377 - 2s - 782us/step - loss: 3412.9934
+Epoch 81/200
+2377/2377 - 2s - 722us/step - loss: 3402.8123
+Epoch 82/200
+2377/2377 - 2s - 730us/step - loss: 3392.5771
+Epoch 83/200
+2377/2377 - 2s - 747us/step - loss: 3379.7795
+Epoch 84/200
+2377/2377 - 2s - 770us/step - loss: 3384.2957
+Epoch 85/200
+2377/2377 - 2s - 850us/step - loss: 3355.0420
+Epoch 86/200
+2377/2377 - 2s - 967us/step - loss: 3357.2732
+Epoch 87/200
+2377/2377 - 2s - 966us/step - loss: 3348.2166
+Epoch 88/200
+2377/2377 - 3s - 1ms/step - loss: 3323.4849
+Epoch 89/200
+2377/2377 - 3s - 1ms/step - loss: 3329.8240
+Epoch 90/200
+2377/2377 - 2s - 994us/step - loss: 3326.5537
+Epoch 91/200
+2377/2377 - 2s - 906us/step - loss: 3318.0510
+Epoch 92/200
+2377/2377 - 3s - 1ms/step - loss: 3300.1272
+Epoch 93/200
+2377/2377 - 2s - 818us/step - loss: 3294.6631
+Epoch 94/200
+2377/2377 - 2s - 803us/step - loss: 3266.5569
+Epoch 95/200
+2377/2377 - 2s - 774us/step - loss: 3284.7910
+Epoch 96/200
+2377/2377 - 2s - 777us/step - loss: 3252.1619
+Epoch 97/200
+2377/2377 - 2s - 779us/step - loss: 3233.4412
+Epoch 98/200
+2377/2377 - 2s - 743us/step - loss: 3242.0942
+Epoch 99/200
+2377/2377 - 2s - 751us/step - loss: 3232.2236
+Epoch 100/200
+2377/2377 - 2s - 748us/step - loss: 3205.7263
+Epoch 101/200
+2377/2377 - 2s - 767us/step - loss: 3227.1814
+Epoch 102/200
+2377/2377 - 2s - 754us/step - loss: 3189.3782
+Epoch 103/200
+2377/2377 - 2s - 761us/step - loss: 3147.7590
+Epoch 104/200
+2377/2377 - 2s - 738us/step - loss: 3161.8130
+Epoch 105/200
+2377/2377 - 2s - 723us/step - loss: 3144.2471
+Epoch 106/200
+2377/2377 - 2s - 799us/step - loss: 3140.7656
+Epoch 107/200
+2377/2377 - 2s - 810us/step - loss: 3116.0989
+Epoch 108/200
+2377/2377 - 2s - 800us/step - loss: 3084.8245
+Epoch 109/200
+2377/2377 - 2s - 753us/step - loss: 3067.4045
+Epoch 110/200
+2377/2377 - 2s - 717us/step - loss: 3086.6167
+Epoch 111/200
+2377/2377 - 2s - 790us/step - loss: 3079.0781
+Epoch 112/200
+2377/2377 - 2s - 846us/step - loss: 3051.8772
+Epoch 113/200
+2377/2377 - 2s - 767us/step - loss: 3070.2776
+Epoch 114/200
+2377/2377 - 2s - 884us/step - loss: 3028.7925
+Epoch 115/200
+2377/2377 - 2s - 814us/step - loss: 3000.9783
+Epoch 116/200
+2377/2377 - 2s - 879us/step - loss: 3019.3831
+Epoch 117/200
+2377/2377 - 2s - 821us/step - loss: 3038.7156
+Epoch 118/200
+2377/2377 - 2s - 761us/step - loss: 2986.7915
+Epoch 119/200
+2377/2377 - 2s - 859us/step - loss: 2966.4902
+Epoch 120/200
+2377/2377 - 2s - 801us/step - loss: 2929.5662
+Epoch 121/200
+2377/2377 - 2s - 844us/step - loss: 2943.2432
+Epoch 122/200
+2377/2377 - 2s - 860us/step - loss: 2924.7556
+Epoch 123/200
+2377/2377 - 2s - 874us/step - loss: 2920.7957
+Epoch 124/200
+2377/2377 - 2s - 872us/step - loss: 2890.7310
+Epoch 125/200
+2377/2377 - 2s - 863us/step - loss: 2891.4658
+Epoch 126/200
+2377/2377 - 2s - 828us/step - loss: 2872.3577
+Epoch 127/200
+2377/2377 - 2s - 756us/step - loss: 2892.2317
+Epoch 128/200
+2377/2377 - 2s - 882us/step - loss: 2826.8103
+Epoch 129/200
+2377/2377 - 2s - 903us/step - loss: 2856.8599
+Epoch 130/200
+2377/2377 - 2s - 891us/step - loss: 2816.6533
+Epoch 131/200
+2377/2377 - 2s - 882us/step - loss: 2799.5972
+Epoch 132/200
+2377/2377 - 2s - 841us/step - loss: 2782.8494
+Epoch 133/200
+2377/2377 - 2s - 824us/step - loss: 2809.3215
+Epoch 134/200
+2377/2377 - 2s - 804us/step - loss: 2786.9663
+Epoch 135/200
+2377/2377 - 3s - 1ms/step - loss: 2789.4387
+Epoch 136/200
+2377/2377 - 3s - 1ms/step - loss: 2779.2952
+Epoch 137/200
+2377/2377 - 2s - 752us/step - loss: 2712.6858
+Epoch 138/200
+2377/2377 - 2s - 857us/step - loss: 2730.7881
+Epoch 139/200
+2377/2377 - 2s - 854us/step - loss: 2699.4944
+Epoch 140/200
+2377/2377 - 2s - 820us/step - loss: 2742.0190
+Epoch 141/200
+2377/2377 - 2s - 862us/step - loss: 2686.6584
+Epoch 142/200
+2377/2377 - 2s - 1ms/step - loss: 2668.9092
+Epoch 143/200
+2377/2377 - 2s - 722us/step - loss: 2679.0283
+Epoch 144/200
+2377/2377 - 2s - 852us/step - loss: 2658.4875
+Epoch 145/200
+2377/2377 - 2s - 872us/step - loss: 2640.9409
+Epoch 146/200
+2377/2377 - 2s - 921us/step - loss: 2652.8335
+Epoch 147/200
+2377/2377 - 2s - 841us/step - loss: 2629.9949
+Epoch 148/200
+2377/2377 - 2s - 703us/step - loss: 2606.5120
+Epoch 149/200
+2377/2377 - 2s - 802us/step - loss: 2593.0627
+Epoch 150/200
+2377/2377 - 2s - 881us/step - loss: 2622.6060
+Epoch 151/200
+2377/2377 - 2s - 890us/step - loss: 2548.5942
+Epoch 152/200
+2377/2377 - 2s - 868us/step - loss: 2581.5642
+Epoch 153/200
+2377/2377 - 2s - 885us/step - loss: 2540.3184
+Epoch 154/200
+2377/2377 - 2s - 849us/step - loss: 2548.8586
+Epoch 155/200
+2377/2377 - 2s - 874us/step - loss: 2538.8306
+Epoch 156/200
+2377/2377 - 2s - 857us/step - loss: 2547.0525
+Epoch 157/200
+2377/2377 - 2s - 761us/step - loss: 2479.1047
+Epoch 158/200
+2377/2377 - 2s - 871us/step - loss: 2490.1953
+Epoch 159/200
+2377/2377 - 2s - 755us/step - loss: 2476.1968
+Epoch 160/200
+2377/2377 - 2s - 817us/step - loss: 2498.0020
+Epoch 161/200
+2377/2377 - 2s - 877us/step - loss: 2470.1116
+Epoch 162/200
+2377/2377 - 2s - 855us/step - loss: 2479.3625
+Epoch 163/200
+2377/2377 - 2s - 852us/step - loss: 2431.5144
+Epoch 164/200
+2377/2377 - 2s - 804us/step - loss: 2447.0000
+Epoch 165/200
+2377/2377 - 2s - 833us/step - loss: 2405.6770
+Epoch 166/200
+2377/2377 - 2s - 813us/step - loss: 2380.8286
+Epoch 167/200
+2377/2377 - 2s - 835us/step - loss: 2392.9973
+Epoch 168/200
+2377/2377 - 2s - 803us/step - loss: 2426.5081
+Epoch 169/200
+2377/2377 - 2s - 798us/step - loss: 2392.9148
+Epoch 170/200
+2377/2377 - 2s - 790us/step - loss: 2411.9607
+Epoch 171/200
+2377/2377 - 2s - 829us/step - loss: 2334.8745
+Epoch 172/200
+2377/2377 - 2s - 792us/step - loss: 2331.3730
+Epoch 173/200
+2377/2377 - 2s - 859us/step - loss: 2354.6794
+Epoch 174/200
+2377/2377 - 2s - 969us/step - loss: 2354.9841
+Epoch 175/200
+2377/2377 - 2s - 787us/step - loss: 2321.7207
+Epoch 176/200
+2377/2377 - 2s - 772us/step - loss: 2332.8145
+Epoch 177/200
+2377/2377 - 2s - 813us/step - loss: 2279.1086
+Epoch 178/200
+2377/2377 - 2s - 846us/step - loss: 2299.1316
+Epoch 179/200
+2377/2377 - 2s - 859us/step - loss: 2288.0745
+Epoch 180/200
+2377/2377 - 2s - 876us/step - loss: 2251.0039
+Epoch 181/200
+2377/2377 - 2s - 835us/step - loss: 2315.0115
+Epoch 182/200
+2377/2377 - 2s - 832us/step - loss: 2274.8633
+Epoch 183/200
+2377/2377 - 2s - 782us/step - loss: 2215.0305
+Epoch 184/200
+2377/2377 - 2s - 878us/step - loss: 2320.4651
+Epoch 185/200
+2377/2377 - 2s - 871us/step - loss: 2256.1313
+Epoch 186/200
+2377/2377 - 2s - 896us/step - loss: 2203.0356
+Epoch 187/200
+2377/2377 - 2s - 840us/step - loss: 2206.8472
+Epoch 188/200
+2377/2377 - 2s - 852us/step - loss: 2193.3655
+Epoch 189/200
+2377/2377 - 2s - 828us/step - loss: 2219.2761
+Epoch 190/200
+2377/2377 - 2s - 840us/step - loss: 2190.6887
+Epoch 191/200
+2377/2377 - 2s - 815us/step - loss: 2192.4629
+Epoch 192/200
+2377/2377 - 2s - 837us/step - loss: 2201.8479
+Epoch 193/200
+2377/2377 - 2s - 844us/step - loss: 2186.1133
+Epoch 194/200
+2377/2377 - 2s - 734us/step - loss: 2193.0896
+Epoch 195/200
+2377/2377 - 2s - 746us/step - loss: 2113.1399
+Epoch 196/200
+2377/2377 - 2s - 747us/step - loss: 2130.2437
+Epoch 197/200
+2377/2377 - 2s - 742us/step - loss: 2191.9717
+Epoch 198/200
+2377/2377 - 2s - 742us/step - loss: 2100.1321
+Epoch 199/200
+2377/2377 - 2s - 727us/step - loss: 2179.9053
+Epoch 200/200
+2377/2377 - 2s - 738us/step - loss: 2115.6162
+
+[1m  1/593[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m54s[0m 92ms/step - loss: 4861.5688
+[1m119/593[0m [32m━━━━[0m[37m━━━━━━━━━━━━━━━━[0m [1m0s[0m 425us/step - loss: 6496.4819
+[1m120/593[0m [32m━━━━[0m[37m━━━━━━━━━━━━━━━━[0m [1m0s[0m 428us/step - loss: 6491.5718
+[1m231/593[0m [32m━━━━━━━[0m[37m━━━━━━━━━━━━━[0m [1m0s[0m 440us/step - loss: 6020.6016
+[1m232/593[0m [32m━━━━━━━[0m[37m━━━━━━━━━━━━━[0m [1m0s[0m 442us/step - loss: 6017.9507
+[1m233/593[0m [32m━━━━━━━[0m[37m━━━━━━━━━━━━━[0m [1m0s[0m 443us/step - loss: 6015.6836
+[1m347/593[0m [32m━━━━━━━━━━━[0m[37m━━━━━━━━━[0m [1m0s[0m 442us/step - loss: 5775.6138
+[1m348/593[0m [32m━━━━━━━━━━━[0m[37m━━━━━━━━━[0m [1m0s[0m 443us/step - loss: 5774.1865
+[1m349/593[0m [32m━━━━━━━━━━━[0m[37m━━━━━━━━━[0m [1m0s[0m 444us/step - loss: 5772.8262
+[1m473/593[0m [32m━━━━━━━━━━━━━━━[0m[37m━━━━━[0m [1m0s[0m 434us/step - loss: 5657.4209
+[1m474/593[0m [32m━━━━━━━━━━━━━━━[0m[37m━━━━━[0m [1m0s[0m 434us/step - loss: 5656.5767
+[1m593/593[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 432us/step - loss: 5613.2188
+[1m593/593[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 433us/step - loss: 5613.0156
+Test Loss: 5492.50341796875

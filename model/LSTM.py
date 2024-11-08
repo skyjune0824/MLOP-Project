@@ -1,6 +1,7 @@
 '''
 LSTM model of traffic flow prediction
 '''
+import sys
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
@@ -44,7 +45,7 @@ def build_lstm_model(input_shape):
     return model
 
 
-def main():
+def main(hide = False):
     '''
     main running codes
     '''
@@ -61,11 +62,16 @@ def main():
 
     checkpoint = ModelCheckpoint('best_model.keras', save_best_only=True, monitor='loss', mode='min')
 
-    model.fit(train_gen, epochs=200, verbose=1, callbacks=[checkpoint])
+    verbose = 2 if hide else 1
+
+    model.fit(train_gen, epochs=200, verbose=verbose, callbacks=[checkpoint])
 
     loss = model.evaluate(test_gen)
     print(f'Test Loss: {loss}')
 
 
 if __name__ == "__main__":
-    main()
+
+    hide = '-h' in sys.argv or '--hide' in sys.argv
+
+    main(hide=hide)
