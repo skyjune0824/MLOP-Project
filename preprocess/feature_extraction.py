@@ -22,7 +22,7 @@ def extract():
     # Date is low-related since we don't know the exact date.
     # So, time and dat of week will be determined as valid feature.
 
-    valid_columns = ['Time', 'Day of the week', 'Total']
+    valid_columns = ['Time', 'Date', 'Day of the week', 'Total']
                     # 'CarCount', 'BikeCount', 'BusCount', 'TruckCount'
     valid_df = full_df[valid_columns]
 

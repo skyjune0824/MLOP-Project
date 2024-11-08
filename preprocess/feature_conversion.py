@@ -18,8 +18,11 @@ def convert():
 
     full_df = load_csv(f"{CSV_DIR}/full_features.csv")
 
+
     full_df['Time'] = pd.to_datetime(full_df['Time'], format='%I:%M:%S %p').dt.hour + \
-        pd.to_datetime(full_df['Time'], format='%I:%M:%S %p').dt.minute / 60
+                       pd.to_datetime(full_df['Time'], format='%I:%M:%S %p').dt.minute / 60
+
+    full_df['Time'] = full_df['Date'] * 24 + full_df['Time']
 
     le = LabelEncoder()
     full_df['Day of the week'] = le.fit_transform(full_df['Day of the week'])
