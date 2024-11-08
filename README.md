@@ -8,6 +8,7 @@
 ## Data download
 
 * Run 'setting/download_data.sh'
+  * In case of kaggle account error, please make kaggle.com API token in the kaggle webpage, and place it under ./.kaggle/kaggle.json'.
 
 ### Source
 
