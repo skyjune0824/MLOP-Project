@@ -5,6 +5,8 @@
 * Run 'setting/env_setup.sh'
   * you should activate the environment for now on.
 
+* In case of code not working, traffic.yml is uploaded for environment.
+
 ## Data download
 
 * Run 'setting/download_data.sh'
