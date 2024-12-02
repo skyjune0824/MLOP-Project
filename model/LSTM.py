@@ -2,17 +2,24 @@
 LSTM model of traffic flow prediction
 '''
 import sys
-
+import numpy
+import warnings
+import pandas
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, Dense
+from tensorflow.keras.layers import LSTM, Dense, Dropout, Input
 from tensorflow.keras.preprocessing.sequence import TimeseriesGenerator
 from tensorflow.keras.callbacks import ModelCheckpoint
-
+from tensorflow.keras.optimizers import Adam
+from sklearn.metrics import classification_report
 from preprocess.file_manage import load_csv
 from setting.paths import TRAIN_DIR, TEST_DIR
+import tensorflow as tf
+from imblearn.over_sampling import SMOTE
+tf.get_logger().setLevel('ERROR')
+warnings.filterwarnings('ignore')
 
 
-def create_dataset(X, y, n_input=3):
+def create_dataset(X, y, n_input=3, batch_size=1):
     '''
     Create a dataset suitable for LSTM.
 
@@ -24,7 +31,8 @@ def create_dataset(X, y, n_input=3):
     Returns:
         TimeseriesGenerator: A generator for training the model.
     '''
-    generator = TimeseriesGenerator(X.values, y.values, length=n_input, batch_size=1)
+    generator = TimeseriesGenerator(
+        X.values, y.values, length=n_input, batch_size=batch_size)
     return generator
 
 
@@ -39,13 +47,20 @@ def build_lstm_model(input_shape):
         model: Compiled LSTM model.
     '''
     model = Sequential()
-    model.add(LSTM(50, activation='relu', input_shape=input_shape))
-    model.add(Dense(1))
-    model.compile(optimizer='adam', loss='mse')
+    model.add(Input(shape=input_shape))
+    model.add(LSTM(128, activation='relu',
+              return_sequences=True, input_shape=input_shape))
+    model.add(Dropout(0.2))
+    model.add(LSTM(64, activation='relu'))
+    model.add(Dropout(0.2))
+    model.add(Dense(4, activation='softmax'))  # 0 ~ 3, low-normal-high-heavy
+    model.compile(optimizer=Adam(learning_rate=0.001),
+                  loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+
     return model
 
 
-def main(hide = False):
+def main(hide=False):
     '''
     main running codes
     '''
@@ -54,21 +69,35 @@ def main(hide = False):
     X_test = load_csv(f"{TEST_DIR}/X.csv")
     y_test = load_csv(f"{TEST_DIR}/y.csv")
 
-    n_input = 3
-    train_gen = create_dataset(X_train, y_train, n_input=n_input)
-    test_gen = create_dataset(X_test, y_test, n_input=n_input)
+    n_input = 5
+    batch_size = 64
+
+    X_train_reshaped = pandas.DataFrame(X_train.to_numpy().reshape(X_train.shape[0], -1))
+
+    original_size = {0: 686, 1: 2887, 2: 287, 3: 901}
+    smote = SMOTE(sampling_strategy={0: 1500, 1: 2887, 2: 1000, 3: 2000}, random_state=42)
+    X_resampled, y_resampled = smote.fit_resample(X_train_reshaped, y_train)
+
+    train_gen = create_dataset(
+        X_resampled, y_resampled, n_input=n_input, batch_size=batch_size)
+    test_gen = create_dataset(
+        X_test, y_test, n_input=n_input, batch_size=batch_size)
 
     model = build_lstm_model(input_shape=(n_input, X_train.shape[1]))
 
-    checkpoint = ModelCheckpoint('LSTM_best_model.keras', save_best_only=True, monitor='loss', mode='min')
+    checkpoint = ModelCheckpoint(
+        'LSTM_best_model.keras', save_best_only=True, monitor='loss', mode='min')
+    # early_stopping = EarlyStopping(
+    #     monitor='val_loss', patience=10, restore_best_weights=True)
+    # No validation split for timeseries
 
     verbose = 2 if hide else 1
 
-    model.fit(train_gen, epochs=200, verbose=verbose, callbacks=[checkpoint])
+    history = model.fit(train_gen, epochs=300, batch_size=batch_size,
+                        verbose=verbose, callbacks=[checkpoint])
 
-    loss = model.evaluate(test_gen)
-    print(f'Test Loss: {loss}')
-
+    loss, acc = model.evaluate(test_gen)
+    print(f'Test Loss: {loss}, Test Accuracy: {acc}')
 
 if __name__ == "__main__":
 

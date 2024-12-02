@@ -27,6 +27,7 @@
 ### LSTM
 
 * Run 'python -m model.LSTM'
+  * Or look 'LSTM.ipynb'
 
 ## Project Proposal
 

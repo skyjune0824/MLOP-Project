@@ -12,7 +12,7 @@ def extract():
     Extract relavent feature only and save it.
     '''
 
-    names = ['Traffic.csv']
+    names = ['TrafficTwoMonth.csv']
     # names = ['Traffic.csv', 'TrafficTwoMonth.csv']
     # names = get_files(f"{RAW_DIR}")
 
@@ -22,8 +22,7 @@ def extract():
     # Date is low-related since we don't know the exact date.
     # So, time and dat of week will be determined as valid feature.
 
-    valid_columns = ['Time', 'Date', 'Day of the week', 'Total']
-                    # 'CarCount', 'BikeCount', 'BusCount', 'TruckCount'
+    valid_columns = ['Time', 'Date', 'Day of the week', 'CarCount', 'BikeCount', 'BusCount', 'TruckCount', 'Total', 'Traffic Situation']
     valid_df = full_df[valid_columns]
 
     save_csv(f"{CSV_DIR}/full_features.csv", valid_df)

@@ -8,7 +8,7 @@ from preprocess.file_manage import load_csv, save_csv
 from setting.paths import CSV_DIR, TEST_DIR, TRAIN_DIR
 
 
-def separate(df_path, target="Total"):
+def separate(df_path, target="Traffic Situation"):
     '''
     Extract y
     '''
@@ -36,7 +36,7 @@ def run_full():
     run above functions
     '''
 
-    X, y = separate(f"{CSV_DIR}/converted_features.csv", target="Total")
+    X, y = separate(f"{CSV_DIR}/converted_features.csv", target="Traffic Situation")
     X_train, X_test, y_train, y_test = split(X, y)
 
     save_csv(f"{TRAIN_DIR}/X.csv", X_train)
