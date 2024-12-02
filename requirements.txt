@@ -7,3 +7,7 @@ numpy
 pandas
 matplotlib
 imbalanced-learn
+torch
+torchvision
+torchaudio
+torch-geometric

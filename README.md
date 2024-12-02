@@ -29,6 +29,15 @@
 * Run 'python -m model.LSTM'
   * Or look 'LSTM.ipynb'
 
+### GNN
+
+* Run 'pytho -m model.GNN'
+  * Or look 'GNN.ipynb'
+
 ## Project Proposal
 
 * <https://www.overleaf.com/read/qhddtgnffvsz#a4bac8>
+
+## Poject Paper
+
+* <https://www.overleaf.com/read/zcstfggrtmng#1901b2>
