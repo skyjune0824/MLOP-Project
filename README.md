@@ -26,6 +26,10 @@
 
 ## Models
 
+### Baselines
+
+Open "baselines.ipynb" and run.
+
 ### LSTM
 
 * Run 'python -m model.LSTM'
